@@ -1,6 +1,8 @@
 <?php
+
     $atores = $_REQUEST['atores']?$_REQUEST['atores']:0;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +12,16 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Lista de atores</h1>
+    <h1>Lista de Atores</h1>
+
     <ul>
-        <?php if($atores): ?>
+        <?php if($atores):?>
             <?php foreach($atores as $ator): ?>
-                <li> <?php echo $ator->primeiro_nome; ?> </li>
-            <?php endforeach; ?>
+                    <li><?php echo $ator->primeiro_nome; ?></li>
+            <?php endforeach; ?>   
         <?php else: ?>
-            <li>Não existem atores </li>
-        <?php endif; ?>
+                <li>Nâo existem atores</li>  
+        <?php endif; ?>          
     </ul>
-    
-</body>
+</body> 
 </html>
